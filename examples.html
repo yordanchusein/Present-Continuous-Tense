@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Examples – Present Continuous Tense</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:ital,wght@0,300;0,400;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="output.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="text-[#1a1a1a] font-sans overflow-x-hidden">
+    <!-- PARTICLE BACKGROUND -->
+    <canvas id="bg"></canvas>
+    <!-- NAVBAR -->
+    <nav
+      class="fixed top-0 left-0 w-full z-50 px-6 py-4 flex items-center justify-between navbar-blur"
+    >
+      <a
+        href="index.html"
+        class="font-display font-bold text-lg tracking-tight text-[#FF6B35]"
+        >TENSES <span class="text-[#FF6B35]">.</span>
+      </a>
+      <div class="hidden md:flex gap-8 text-sm font-medium text-[#555]">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="function.html" class="nav-link">Function</a>
+        <a href="formula.html" class="nav-link">Formula</a>
+        <a href="examples.html" class="nav-link active-link">Examples</a>
+        <a href="practice.html" class="nav-link">Practice</a>
+        <a href="closing.html" class="nav-link">Closing</a>
+      </div>
+      <button id="menuBtn" class="md:hidden flex flex-col gap-1.5 p-1">
+        <span class="w-6 h-0.5 bg-[#1a1a1a]"></span>
+        <span class="w-6 h-0.5 bg-[#1a1a1a]"></span>
+        <span class="w-6 h-0.5 bg-[#1a1a1a]"></span>
+      </button>
+    </nav>
+    <div
+      id="mobileMenu"
+      class="fixed inset-0 z-40 bg-[#F7F4EF] flex-col items-center justify-center gap-8 text-2xl font-display font-bold hidden"
+    >
+      <a href="index.html" class="mobile-nav">Home</a>
+      <a href="function.html" class="mobile-nav">Function</a>
+      <a href="formula.html" class="mobile-nav">Formula</a>
+      <a href="examples.html" class="mobile-nav">Examples</a>
+      <a href="practice.html" class="mobile-nav">Practice</a>
+      <a href="closing.html" class="mobile-nav">Closing</a>
+    </div>
+
+    <!-- PAGE HEADER -->
+    <section class="pt-36 pb-10 px-6 text-center relative">
+      <div class="blob blob-2"></div>
+      <div class="page-tag fade-up">04 / Examples</div>
+      <h2
+        class="font-display font-extrabold text-4xl md:text-6xl mt-4 fade-up"
+        style="animation-delay: 0.15s"
+      >
+        See it in <span class="text-[#FF6B35]">action</span>
+      </h2>
+      <p
+        class="mt-4 text-[#666] max-w-xl mx-auto text-lg fade-up"
+        style="animation-delay: 0.25s"
+      >
+        Real-life sentences using Present Continuous. Tap the arrows to explore!
+      </p>
+    </section>
+
+    <!-- CAROUSEL -->
+    <section class="py-10 px-6">
+      <div class="max-w-3xl mx-auto">
+        <div class="carousel-wrapper fade-up">
+          <!-- Main card -->
+          <div class="carousel-card" id="carouselCard">
+            <div class="carousel-emoji" id="carouselEmoji">☕</div>
+            <div class="carousel-type" id="carouselType">Positive</div>
+            <div class="carousel-sentence" id="carouselSentence">
+              She <span class="highlight-verb">is drinking</span> coffee right
+              now.
+            </div>
+            <div class="carousel-translation" id="carouselTranslation">
+              Dia sedang minum kopi sekarang.
+            </div>
+            <div class="carousel-breakdown" id="carouselBreakdown">
+              <span class="bd-item">She</span>
+              <span class="bd-arrow">→</span>
+              <span class="bd-be">is</span>
+              <span class="bd-arrow">→</span>
+              <span class="bd-verb">drinking</span>
+            </div>
+          </div>
+
+          <!-- Controls -->
+          <div class="carousel-controls">
+            <button class="carousel-btn" id="prevBtn">←</button>
+            <div class="carousel-dots" id="carouselDots"></div>
+            <button class="carousel-btn" id="nextBtn">→</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ALL EXAMPLES LIST -->
+    <section class="py-8 px-6">
+      <div class="max-w-3xl mx-auto">
+        <h3 class="font-display font-bold text-xl mb-6 text-center text-[#888]">
+          All Examples at a Glance
+        </h3>
+        <div class="examples-list" id="examplesList"></div>
+      </div>
+    </section>
+
+    <!-- NAVIGATION -->
+    <section class="py-12 px-6">
+      <div class="max-w-3xl mx-auto flex justify-between items-center">
+        <a href="formula.html" class="cta-ghost">← Back</a>
+        <a href="practice.html" class="cta-primary">Next: Practice →</a>
+      </div>
+    </section>
+
+    <script>
+      const examples = [
+        {
+          emoji: "☕",
+          type: "Positive",
+          sentence:
+            'She <span class="highlight-verb">is drinking</span> coffee right now.',
+          translation: "Dia sedang minum kopi sekarang.",
+          subject: "She",
+          be: "is",
+          verb: "drinking",
+        },
+        {
+          emoji: "🎧",
+          type: "Negative",
+          sentence:
+            'He <span class="highlight-verb">is not listening</span> to the teacher.',
+          translation: "Dia tidak sedang mendengarkan guru.",
+          subject: "He",
+          be: "is not",
+          verb: "listening",
+        },
+        {
+          emoji: "🏃",
+          type: "Positive",
+          sentence:
+            'They <span class="highlight-verb">are running</span> in the park.',
+          translation: "Mereka sedang berlari di taman.",
+          subject: "They",
+          be: "are",
+          verb: "running",
+        },
+        {
+          emoji: "📚",
+          type: "Interrogative",
+          sentence:
+            '<span class="highlight-verb">Are</span> you studying for the exam?',
+          translation: "Apakah kamu sedang belajar untuk ujian?",
+          subject: "you",
+          be: "Are",
+          verb: "studying",
+        },
+        {
+          emoji: "🍕",
+          type: "Positive",
+          sentence:
+            'We <span class="highlight-verb">are eating</span> dinner together.',
+          translation: "Kami sedang makan malam bersama.",
+          subject: "We",
+          be: "are",
+          verb: "eating",
+        },
+        {
+          emoji: "💤",
+          type: "Negative",
+          sentence:
+            'The baby <span class="highlight-verb">is not sleeping</span> anymore.',
+          translation: "Bayinya sudah tidak tidur lagi.",
+          subject: "The baby",
+          be: "is not",
+          verb: "sleeping",
+        },
+        {
+          emoji: "🎮",
+          type: "Positive",
+          sentence:
+            'My brother <span class="highlight-verb">is playing</span> games all day.',
+          translation: "Kakakku sedang main game seharian.",
+          subject: "My brother",
+          be: "is",
+          verb: "playing",
+        },
+      ];
+
+      let current = 0;
+
+      const card = document.getElementById("carouselCard");
+      const emoji = document.getElementById("carouselEmoji");
+      const type = document.getElementById("carouselType");
+      const sentence = document.getElementById("carouselSentence");
+      const translation = document.getElementById("carouselTranslation");
+      const breakdown = document.getElementById("carouselBreakdown");
+      const dots = document.getElementById("carouselDots");
+      const listEl = document.getElementById("examplesList");
+
+      function buildDots() {
+        dots.innerHTML = "";
+        examples.forEach((_, i) => {
+          const d = document.createElement("button");
+          d.className = "dot-btn" + (i === current ? " dot-active" : "");
+          d.onclick = () => goTo(i);
+          dots.appendChild(d);
+        });
+      }
+
+      function typeClass(t) {
+        if (t === "Positive") return "type-pos";
+        if (t === "Negative") return "type-neg";
+        return "type-int";
+      }
+
+      function goTo(index) {
+        card.classList.add("carousel-exit");
+        setTimeout(() => {
+          current = (index + examples.length) % examples.length;
+          const ex = examples[current];
+          emoji.textContent = ex.emoji;
+          type.textContent = ex.type;
+          type.className = "carousel-type " + typeClass(ex.type);
+          sentence.innerHTML = ex.sentence;
+          translation.textContent = ex.translation;
+          breakdown.innerHTML = `
+          <span class="bd-item">${ex.subject}</span>
+          <span class="bd-arrow">→</span>
+          <span class="bd-be">${ex.be}</span>
+          <span class="bd-arrow">→</span>
+          <span class="bd-verb">${ex.verb}</span>
+        `;
+          buildDots();
+          card.classList.remove("carousel-exit");
+          card.classList.add("carousel-enter");
+          setTimeout(() => card.classList.remove("carousel-enter"), 400);
+        }, 200);
+      }
+
+      function buildList() {
+        listEl.innerHTML = "";
+        examples.forEach((ex, i) => {
+          const item = document.createElement("div");
+          item.className = "ex-list-item";
+          item.innerHTML = `
+          <span class="ex-num">${String(i + 1).padStart(2, "0")}</span>
+          <span class="ex-emoji-sm">${ex.emoji}</span>
+          <span class="ex-text">${ex.sentence}</span>
+          <span class="ex-badge ${typeClass(ex.type)}">${ex.type}</span>
+        `;
+          item.onclick = () => goTo(i);
+          listEl.appendChild(item);
+        });
+      }
+
+      document.getElementById("prevBtn").onclick = () => goTo(current - 1);
+      document.getElementById("nextBtn").onclick = () => goTo(current + 1);
+
+      buildDots();
+      buildList();
+
+      // Keyboard support
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowLeft") goTo(current - 1);
+        if (e.key === "ArrowRight") goTo(current + 1);
+      });
+    </script>
+
+    <script src="main.js"></script>
+  </body>
+</html>

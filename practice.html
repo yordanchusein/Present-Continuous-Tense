@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice – Present Continuous Tense</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:ital,wght@0,300;0,400;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="output.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="text-[#1a1a1a] font-sans overflow-x-hidden">
+    <!-- PARTICLE BACKGROUND -->
+    <canvas id="bg"></canvas>
+    <!-- NAVBAR -->
+    <nav
+      class="fixed top-0 left-0 w-full z-50 px-6 py-4 flex items-center justify-between navbar-blur"
+    >
+      <a
+        href="index.html"
+        class="font-display font-bold text-lg tracking-tight text-[#FF6B35]"
+      >
+        TENSES <span class="text-[#FF6B35]">.</span>
+      </a>
+      <div class="hidden md:flex gap-8 text-sm font-medium text-[#555]">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="function.html" class="nav-link">Function</a>
+        <a href="formula.html" class="nav-link">Formula</a>
+        <a href="examples.html" class="nav-link">Examples</a>
+        <a href="practice.html" class="nav-link active-link">Practice</a>
+        <a href="closing.html" class="nav-link">Closing</a>
+      </div>
+      <button id="menuBtn" class="md:hidden flex flex-col gap-1.5 p-1">
+        <span class="w-6 h-0.5 bg-[#1a1a1a]"></span>
+        <span class="w-6 h-0.5 bg-[#1a1a1a]"></span>
+        <span class="w-6 h-0.5 bg-[#1a1a1a]"></span>
+      </button>
+    </nav>
+    <div
+      id="mobileMenu"
+      class="fixed inset-0 z-40 bg-[#F7F4EF] flex-col items-center justify-center gap-8 text-2xl font-display font-bold hidden"
+    >
+      <a href="index.html" class="mobile-nav">Home</a>
+      <a href="function.html" class="mobile-nav">Function</a>
+      <a href="formula.html" class="mobile-nav">Formula</a>
+      <a href="examples.html" class="mobile-nav">Examples</a>
+      <a href="practice.html" class="mobile-nav">Practice</a>
+      <a href="closing.html" class="mobile-nav">Closing</a>
+    </div>
+
+    <!-- PAGE HEADER -->
+    <section class="pt-36 pb-10 px-6 text-center relative">
+      <div class="blob blob-3"></div>
+      <div class="page-tag fade-up">05 / Practice</div>
+      <h2
+        class="font-display font-extrabold text-4xl md:text-6xl mt-4 fade-up"
+        style="animation-delay: 0.15s"
+      >
+        Test your <span class="text-[#FF6B35]">skills</span>
+      </h2>
+      <p
+        class="mt-4 text-[#666] max-w-xl mx-auto text-lg fade-up"
+        style="animation-delay: 0.25s"
+      >
+        You've learned the theory. Now let's see what you actually remember 😤
+      </p>
+    </section>
+
+    <!-- MINI CHECKLIST -->
+    <section class="py-8 px-6">
+      <div class="max-w-2xl mx-auto fade-up">
+        <div class="checklist-box">
+          <h3 class="font-display font-bold text-lg mb-5">
+            Before the quiz — quick self-check ✅
+          </h3>
+          <div class="check-item" id="c1" onclick="toggleCheck('c1')">
+            <div class="check-box"></div>
+            <span>I know when to use <strong>am / is / are</strong></span>
+          </div>
+          <div class="check-item" id="c2" onclick="toggleCheck('c2')">
+            <div class="check-box"></div>
+            <span>I can form a <strong>positive</strong> sentence</span>
+          </div>
+          <div class="check-item" id="c3" onclick="toggleCheck('c3')">
+            <div class="check-box"></div>
+            <span>I can form a <strong>negative</strong> sentence</span>
+          </div>
+          <div class="check-item" id="c4" onclick="toggleCheck('c4')">
+            <div class="check-box"></div>
+            <span>I can form a <strong>question</strong> sentence</span>
+          </div>
+          <div class="check-item" id="c5" onclick="toggleCheck('c5')">
+            <div class="check-box"></div>
+            <span>I know how to add <strong>-ing</strong> correctly</span>
+          </div>
+          <div class="check-progress mt-5">
+            <div class="progress-bar-bg">
+              <div
+                class="progress-bar-fill"
+                id="progressFill"
+                style="width: 0%"
+              ></div>
+            </div>
+            <span class="progress-label" id="progressLabel">0 / 5 ready</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUIZ CTA -->
+    <section class="py-10 px-6">
+      <div class="max-w-2xl mx-auto text-center fade-up">
+        <div class="quiz-cta-box">
+          <div class="quiz-cta-icon">🎯</div>
+          <h3 class="font-display font-extrabold text-3xl mt-4">
+            Ready to go?
+          </h3>
+          <p class="text-[#666] mt-3 text-base max-w-sm mx-auto">
+            Take the fun quiz and see how well you've mastered Present
+            Continuous Tense!
+          </p>
+          <a href="#" id="quizBtn" class="quiz-btn mt-8 inline-block">
+            Try Fun Quiz 🎯
+          </a>
+          <p class="text-xs text-[#aaa] mt-4">
+            Opens in a new tab · ~5 minutes
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEW LINKS -->
+    <section class="py-8 px-6">
+      <div class="max-w-2xl mx-auto">
+        <h3
+          class="font-display font-bold text-center text-[#888] text-sm uppercase tracking-widest mb-5"
+        >
+          Need to review?
+        </h3>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+          <a href="function.html" class="review-card">
+            <span class="review-icon">📖</span>
+            <span>Function</span>
+          </a>
+          <a href="formula.html" class="review-card">
+            <span class="review-icon">🧮</span>
+            <span>Formula</span>
+          </a>
+          <a href="examples.html" class="review-card">
+            <span class="review-icon">💬</span>
+            <span>Examples</span>
+          </a>
+          <a href="closing.html" class="review-card">
+            <span class="review-icon">🏁</span>
+            <span>Closing</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- NAVIGATION -->
+    <section class="py-12 px-6">
+      <div class="max-w-3xl mx-auto flex justify-between items-center">
+        <a href="examples.html" class="cta-ghost">← Back</a>
+        <a href="closing.html" class="cta-primary">Next: Closing →</a>
+      </div>
+    </section>
+
+    <script>
+      let checked = new Set();
+
+      function toggleCheck(id) {
+        const item = document.getElementById(id);
+        if (checked.has(id)) {
+          checked.delete(id);
+          item.classList.remove("checked");
+        } else {
+          checked.add(id);
+          item.classList.add("checked");
+        }
+        const pct = (checked.size / 5) * 100;
+        document.getElementById("progressFill").style.width = pct + "%";
+        document.getElementById("progressLabel").textContent =
+          checked.size + " / 5 ready";
+      }
+
+      document
+        .getElementById("quizBtn")
+        .addEventListener("click", function (e) {
+          e.preventDefault();
+          // Replace this URL with the actual quiz link
+          const quizUrl =
+            "https://wayground.com/admin/quiz/603476b89194e4001b388342"; // placeholder
+          window.open(quizUrl, "_blank");
+        });
+    </script>
+
+    <script src="main.js"></script>
+  </body>
+</html>

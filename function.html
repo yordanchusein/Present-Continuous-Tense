@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function – Present Continuous Tense</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:ital,wght@0,300;0,400;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="output.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="text-[#1a1a1a] font-sans overflow-x-hidden">
+    <!-- PARTICLE BACKGROUND -->
+    <canvas id="bg"></canvas>
+    <!-- NAVBAR -->
+    <nav
+      class="fixed top-0 left-0 w-full z-50 px-6 py-4 flex items-center justify-between navbar-blur"
+    >
+      <a
+        href="index.html"
+        class="font-display font-bold text-lg tracking-tight text-[#FF6B35]"
+      >
+        TENSES <span class="text-[#FF6B35]">.</span>
+      </a>
+      <div class="hidden md:flex gap-8 text-sm font-medium text-[#555]">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="function.html" class="nav-link active-link">Function</a>
+        <a href="formula.html" class="nav-link">Formula</a>
+        <a href="examples.html" class="nav-link">Examples</a>
+        <a href="practice.html" class="nav-link">Practice</a>
+        <a href="closing.html" class="nav-link">Closing</a>
+      </div>
+      <button id="menuBtn" class="md:hidden flex flex-col gap-1.5 p-1">
+        <span class="w-6 h-0.5 bg-[#1a1a1a] transition-all"></span>
+        <span class="w-6 h-0.5 bg-[#1a1a1a] transition-all"></span>
+        <span class="w-6 h-0.5 bg-[#1a1a1a] transition-all"></span>
+      </button>
+    </nav>
+    <div
+      id="mobileMenu"
+      class="fixed inset-0 z-40 bg-[#F7F4EF] flex-col items-center justify-center gap-8 text-2xl font-display font-bold hidden"
+    >
+      <a href="index.html" class="mobile-nav">Home</a>
+      <a href="function.html" class="mobile-nav">Function</a>
+      <a href="formula.html" class="mobile-nav">Formula</a>
+      <a href="examples.html" class="mobile-nav">Examples</a>
+      <a href="practice.html" class="mobile-nav">Practice</a>
+      <a href="closing.html" class="mobile-nav">Closing</a>
+    </div>
+
+    <!-- PAGE HEADER -->
+    <section class="pt-36 pb-10 px-6 text-center relative">
+      <div class="blob blob-3"></div>
+      <div class="page-tag fade-up">02 / Function</div>
+      <h2
+        class="font-display font-extrabold text-4xl md:text-6xl mt-4 fade-up"
+        style="animation-delay: 0.15s"
+      >
+        What's it <span class="text-[#FF6B35]">used</span> for?
+      </h2>
+      <p
+        class="mt-4 text-[#666] max-w-xl mx-auto text-lg fade-up"
+        style="animation-delay: 0.25s"
+      >
+        Present Continuous isn't just one thing — it actually has several cool
+        uses in everyday English.
+      </p>
+    </section>
+
+    <!-- FUNCTION CARDS -->
+    <section class="py-10 px-6">
+      <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
+        <div class="func-card fade-up" style="animation-delay: 0.1s">
+          <div class="func-icon">⚡</div>
+          <h3 class="func-title">Right Now Action</h3>
+          <p class="func-desc">
+            Something happening at this exact moment — you're doing it as you
+            speak.
+          </p>
+          <div class="func-example">
+            "She <strong>is texting</strong> her friend right now."
+          </div>
+        </div>
+
+        <div class="func-card fade-up" style="animation-delay: 0.2s">
+          <div class="func-icon">📅</div>
+          <h3 class="func-title">Around This Time</h3>
+          <p class="func-desc">
+            Not necessarily at this second, but happening these days or this
+            period.
+          </p>
+          <div class="func-example">
+            "I <strong>am studying</strong> for my exams this week."
+          </div>
+        </div>
+
+        <div class="func-card fade-up" style="animation-delay: 0.3s">
+          <div class="func-icon">🔮</div>
+          <h3 class="func-title">Future Plans</h3>
+          <p class="func-desc">
+            A scheduled or arranged plan in the near future — you've already
+            decided.
+          </p>
+          <div class="func-example">
+            "We <strong>are meeting</strong> tomorrow at 3 PM."
+          </div>
+        </div>
+
+        <div class="func-card fade-up" style="animation-delay: 0.4s">
+          <div class="func-icon">😤</div>
+          <h3 class="func-title">Annoying Habits</h3>
+          <p class="func-desc">
+            Something that happens repeatedly and is irritating (usually with
+            "always").
+          </p>
+          <div class="func-example">
+            "He <strong>is always leaving</strong> the lights on!"
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SIGNAL WORDS -->
+    <section class="py-10 px-6">
+      <div class="max-w-3xl mx-auto">
+        <div class="signal-box fade-up">
+          <h3 class="font-display font-bold text-xl mb-4">🔑 Signal Words</h3>
+          <p class="text-[#666] mb-5 text-sm">
+            These words are clues that tell you to use Present Continuous:
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <span class="signal-tag">now</span>
+            <span class="signal-tag">right now</span>
+            <span class="signal-tag">at the moment</span>
+            <span class="signal-tag">currently</span>
+            <span class="signal-tag">today</span>
+            <span class="signal-tag">this week</span>
+            <span class="signal-tag">look!</span>
+            <span class="signal-tag">listen!</span>
+            <span class="signal-tag">still</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NAVIGATION -->
+    <section class="py-12 px-6">
+      <div class="max-w-3xl mx-auto flex justify-between items-center">
+        <a href="index.html" class="cta-ghost">← Back</a>
+        <a href="formula.html" class="cta-primary">Next: Formula →</a>
+      </div>
+    </section>
+
+    <script src="main.js"></script>
+  </body>
+</html>

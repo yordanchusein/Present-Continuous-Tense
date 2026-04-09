@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Present Continuous Tense</title>
+    <style></style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:ital,wght@0,300;0,400;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="output.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="text-[#1a1a1a] font-sans overflow-x-hidden">
+    <!-- PARTICLE BACKGROUND -->
+    <canvas id="bg"></canvas>
+    <!-- NAVBAR -->
+    <nav
+      class="fixed top-0 left-0 w-full z-50 px-6 py-4 flex items-center justify-between navbar-blur"
+    >
+      <a
+        href="index.html"
+        class="font-display font-bold text-lg tracking-tight text-[#FF6B35]"
+      >
+        TENSES <span class="text-[#FF6B35]">.</span>
+      </a>
+      <div class="hidden md:flex gap-8 text-sm font-medium text-[#555]">
+        <a href="index.html" class="nav-link active-link">Home</a>
+        <a href="function.html" class="nav-link">Function</a>
+        <a href="formula.html" class="nav-link">Formula</a>
+        <a href="examples.html" class="nav-link">Examples</a>
+        <a href="practice.html" class="nav-link">Practice</a>
+        <a href="closing.html" class="nav-link">Closing</a>
+      </div>
+      <!-- Mobile hamburger -->
+      <button id="menuBtn" class="md:hidden flex flex-col gap-1.5 p-1">
+        <span class="w-6 h-0.5 bg-[#1a1a1a] transition-all"></span>
+        <span class="w-6 h-0.5 bg-[#1a1a1a] transition-all"></span>
+        <span class="w-6 h-0.5 bg-[#1a1a1a] transition-all"></span>
+      </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div
+      id="mobileMenu"
+      class="fixed inset-0 z-40 bg-[#F7F4EF] flex-col items-center justify-center gap-8 text-2xl font-display font-bold hidden"
+    >
+      <a href="index.html" class="mobile-nav">Home</a>
+      <a href="function.html" class="mobile-nav">Function</a>
+      <a href="formula.html" class="mobile-nav">Formula</a>
+      <a href="examples.html" class="mobile-nav">Examples</a>
+      <a href="practice.html" class="mobile-nav">Practice</a>
+      <a href="closing.html" class="mobile-nav">Closing</a>
+    </div>
+
+    <!-- HERO -->
+    <section
+      class="min-h-screen flex flex-col items-center justify-center px-6 pt-24 pb-16 relative"
+    >
+      <!-- Decorative blobs -->
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+
+      <!-- Badge -->
+      <div class="hero-badge fade-up" style="animation-delay: 0.1s">
+        <span class="dot"></span> English Grammar · Grade 10–12
+      </div>
+
+      <!-- Headline -->
+      <h1
+        class="font-display text-center font-extrabold leading-none mt-6 fade-up"
+        style="animation-delay: 0.2s"
+      >
+        <span class="block text-5xl md:text-8xl text-[#1a1a1a]">Present</span>
+        <span class="block text-5xl md:text-8xl text-stroke">Continuous</span>
+        <span class="block text-5xl md:text-8xl text-[#1a1a1a]">Tense</span>
+      </h1>
+
+      <!-- Subtitle -->
+      <p
+        class="mt-6 text-center text-[#666] text-lg md:text-xl max-w-lg leading-relaxed fade-up"
+        style="animation-delay: 0.35s"
+      >
+        Learn how to talk about actions happening <em>right now</em> — and level
+        up your English game. 🚀
+      </p>
+
+      <!-- CTA -->
+      <div
+        class="mt-10 flex flex-col sm:flex-row gap-4 fade-up"
+        style="animation-delay: 0.5s"
+      >
+        <a href="function.html" class="cta-primary"> Start Learning → </a>
+        <a href="formula.html" class="cta-secondary"> Jump to Formula </a>
+      </div>
+
+      <!-- Floating chips -->
+      <div
+        class="mt-16 flex flex-wrap justify-center gap-3 fade-up"
+        style="animation-delay: 0.65s"
+      >
+        <span class="chip">She <strong>is reading</strong> right now</span>
+        <span class="chip chip-accent"
+          >They <strong>are playing</strong> outside</span
+        >
+        <span class="chip">I <strong>am learning</strong> English</span>
+      </div>
+    </section>
+
+    <!-- QUICK STATS -->
+    <section class="py-16 px-6">
+      <div class="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="stat-card fade-up" style="animation-delay: 0.1s">
+          <div class="stat-num">3</div>
+          <div class="stat-label">Formulas</div>
+        </div>
+        <div class="stat-card fade-up" style="animation-delay: 0.2s">
+          <div class="stat-num">5+</div>
+          <div class="stat-label">Examples</div>
+        </div>
+        <div class="stat-card fade-up" style="animation-delay: 0.3s">
+          <div class="stat-num">4</div>
+          <div class="stat-label">Functions</div>
+        </div>
+        <div class="stat-card fade-up" style="animation-delay: 0.4s">
+          <div class="stat-num">1</div>
+          <div class="stat-label">Fun Quiz 🎯</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEXT PAGE CTA -->
+    <section class="py-10 px-6 text-center">
+      <p class="text-[#888] text-sm mb-4 tracking-wide uppercase">
+        Ready? Let's go →
+      </p>
+      <a href="function.html" class="cta-primary inline-block"
+        >Explore Functions</a
+      >
+    </section>
+
+    <script src="main.js"></script>
+  </body>
+</html>

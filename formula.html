@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formula – Present Continuous Tense</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:ital,wght@0,300;0,400;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="output.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="text-[#1a1a1a] font-sans overflow-x-hidden">
+    <!-- PARTICLE BACKGROUND -->
+    <canvas id="bg"></canvas>
+    <!-- NAVBAR -->
+    <nav
+      class="fixed top-0 left-0 w-full z-50 px-6 py-4 flex items-center justify-between navbar-blur"
+    >
+      <a
+        href="index.html"
+        class="font-display font-bold text-lg tracking-tight text-[#FF6B35]"
+      >
+        TENSES <span class="text-[#FF6B35]">.</span>
+      </a>
+      <div class="hidden md:flex gap-8 text-sm font-medium text-[#555]">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="function.html" class="nav-link">Function</a>
+        <a href="formula.html" class="nav-link active-link">Formula</a>
+        <a href="examples.html" class="nav-link">Examples</a>
+        <a href="practice.html" class="nav-link">Practice</a>
+        <a href="closing.html" class="nav-link">Closing</a>
+      </div>
+      <button id="menuBtn" class="md:hidden flex flex-col gap-1.5 p-1">
+        <span class="w-6 h-0.5 bg-[#1a1a1a]"></span>
+        <span class="w-6 h-0.5 bg-[#1a1a1a]"></span>
+        <span class="w-6 h-0.5 bg-[#1a1a1a]"></span>
+      </button>
+    </nav>
+    <div
+      id="mobileMenu"
+      class="fixed inset-0 z-40 bg-[#F7F4EF] flex-col items-center justify-center gap-8 text-2xl font-display font-bold hidden"
+    >
+      <a href="index.html" class="mobile-nav">Home</a>
+      <a href="function.html" class="mobile-nav">Function</a>
+      <a href="formula.html" class="mobile-nav">Formula</a>
+      <a href="examples.html" class="mobile-nav">Examples</a>
+      <a href="practice.html" class="mobile-nav">Practice</a>
+      <a href="closing.html" class="mobile-nav">Closing</a>
+    </div>
+
+    <!-- PAGE HEADER -->
+    <section class="pt-36 pb-10 px-6 text-center relative">
+      <div class="blob blob-1"></div>
+      <div class="page-tag fade-up">03 / Formula</div>
+      <h2
+        class="font-display font-extrabold text-4xl md:text-6xl mt-4 fade-up"
+        style="animation-delay: 0.15s"
+      >
+        The <span class="text-[#FF6B35]">Formula</span>
+      </h2>
+      <p
+        class="mt-4 text-[#666] max-w-xl mx-auto text-lg fade-up"
+        style="animation-delay: 0.25s"
+      >
+        Three patterns. Master them, and you can construct any sentence.
+      </p>
+    </section>
+
+    <!-- BE CHART -->
+    <section class="py-4 px-6">
+      <div class="max-w-2xl mx-auto fade-up">
+        <div class="be-chart">
+          <h3
+            class="font-display font-bold text-base mb-4 text-center text-[#888] uppercase tracking-widest text-sm"
+          >
+            To Be — Quick Reference
+          </h3>
+          <div class="grid grid-cols-3 gap-4 text-center">
+            <div class="be-item">
+              <div class="be-pronoun">I</div>
+              <div class="be-verb">am</div>
+            </div>
+            <div class="be-item">
+              <div class="be-pronoun">He / She / It</div>
+              <div class="be-verb">is</div>
+            </div>
+            <div class="be-item">
+              <div class="be-pronoun">You / We / They</div>
+              <div class="be-verb">are</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORMULA CARDS -->
+    <section class="py-10 px-6">
+      <div class="max-w-4xl mx-auto flex flex-col gap-8">
+        <!-- Positive -->
+        <div
+          class="formula-card formula-pos fade-up"
+          style="animation-delay: 0.1s"
+        >
+          <div class="formula-label">✅ Positive</div>
+          <div class="formula-structure">
+            <span class="f-part f-subject">Subject</span>
+            <span class="f-plus">+</span>
+            <span class="f-part f-be">am / is / are</span>
+            <span class="f-plus">+</span>
+            <span class="f-part f-verb"
+              >Verb<span class="f-ing">-ing</span></span
+            >
+          </div>
+          <div class="formula-examples">
+            <p>→ I <strong>am eating</strong> pizza.</p>
+            <p>→ She <strong>is dancing</strong> on stage.</p>
+          </div>
+        </div>
+
+        <!-- Negative -->
+        <div
+          class="formula-card formula-neg fade-up"
+          style="animation-delay: 0.2s"
+        >
+          <div class="formula-label">❌ Negative</div>
+          <div class="formula-structure">
+            <span class="f-part f-subject">Subject</span>
+            <span class="f-plus">+</span>
+            <span class="f-part f-be">am / is / are</span>
+            <span class="f-plus">+</span>
+            <span class="f-part f-not">not</span>
+            <span class="f-plus">+</span>
+            <span class="f-part f-verb"
+              >Verb<span class="f-ing">-ing</span></span
+            >
+          </div>
+          <div class="formula-examples">
+            <p>→ I <strong>am not sleeping</strong> right now.</p>
+            <p>→ They <strong>are not watching</strong> TV.</p>
+          </div>
+        </div>
+
+        <!-- Interrogative -->
+        <div
+          class="formula-card formula-int fade-up"
+          style="animation-delay: 0.3s"
+        >
+          <div class="formula-label">❓ Interrogative</div>
+          <div class="formula-structure">
+            <span class="f-part f-be">Am / Is / Are</span>
+            <span class="f-plus">+</span>
+            <span class="f-part f-subject">Subject</span>
+            <span class="f-plus">+</span>
+            <span class="f-part f-verb"
+              >Verb<span class="f-ing">-ing</span></span
+            >
+            <span class="f-plus">+</span>
+            <span class="f-part f-q">?</span>
+          </div>
+          <div class="formula-examples">
+            <p>→ <strong>Are</strong> you listening to me?</p>
+            <p>→ <strong>Is</strong> he working today?</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VERB-ING RULES -->
+    <section class="py-8 px-6">
+      <div class="max-w-3xl mx-auto fade-up">
+        <h3 class="font-display font-bold text-2xl mb-6 text-center">
+          Adding <span class="text-[#FF6B35]">-ing</span> Rules
+        </h3>
+        <div class="grid md:grid-cols-3 gap-4">
+          <div class="ing-rule">
+            <div class="ing-rule-title">Normal</div>
+            <div class="ing-rule-desc">Just add <strong>-ing</strong></div>
+            <div class="ing-rule-ex">play → play<strong>ing</strong></div>
+            <div class="ing-rule-ex">eat → eat<strong>ing</strong></div>
+          </div>
+          <div class="ing-rule">
+            <div class="ing-rule-title">Ends in -e</div>
+            <div class="ing-rule-desc">
+              Drop the <strong>-e</strong>, add <strong>-ing</strong>
+            </div>
+            <div class="ing-rule-ex">make → mak<strong>ing</strong></div>
+            <div class="ing-rule-ex">write → writ<strong>ing</strong></div>
+          </div>
+          <div class="ing-rule">
+            <div class="ing-rule-title">CVC Pattern</div>
+            <div class="ing-rule-desc">Double the last consonant</div>
+            <div class="ing-rule-ex">run → run<strong>ning</strong></div>
+            <div class="ing-rule-ex">sit → sit<strong>ting</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NAVIGATION -->
+    <section class="py-12 px-6">
+      <div class="max-w-3xl mx-auto flex justify-between items-center">
+        <a href="function.html" class="cta-ghost">← Back</a>
+        <a href="examples.html" class="cta-primary">Next: Examples →</a>
+      </div>
+    </section>
+
+    <script src="main.js"></script>
+  </body>
+</html>
