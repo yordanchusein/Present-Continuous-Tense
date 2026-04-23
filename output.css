@@ -222,6 +222,9 @@
     .z-50 {
       z-index: 50;
     }
+    .mx-4 {
+      margin-inline: calc(var(--spacing) * 4);
+    }
     .mx-auto {
       margin-inline: auto;
     }
@@ -380,14 +383,8 @@
       border-top-style: var(--tw-border-style);
       border-top-width: 1px;
     }
-    .border-\[\#333\] {
-      border-color: #333;
-    }
     .bg-\[\#1a1a1a\] {
       background-color: #1a1a1a;
-    }
-    .bg-\[\#222\] {
-      background-color: #222;
     }
     .bg-\[\#F7F4EF\] {
       background-color: #F7F4EF;
@@ -519,9 +516,6 @@
     }
     .text-\[\#FF6B35\] {
       color: #FF6B35;
-    }
-    .text-\[\#a1a1a1\] {
-      color: #a1a1a1;
     }
     .text-\[\#aaa\] {
       color: #aaa;
